@@ -1,0 +1,32 @@
+{
+  "name": "serverless-post-deploy-builder",
+  "version": "1.0.0",
+  "description": "A Serverless Framework plugin to immediately build after serverless deployment",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahasooq/serverless-post-deploy-builder.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "serverless",
+    "framework",
+    "plugin",
+    "deploy",
+    "build",
+    "frontend",
+    "client",
+    "cloudformation",
+    "stack",
+    "output",
+    "cognito",
+    "environment",
+    "variable"],
+  "author": "Mahasooq AT <mat@mahasooq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "^7.0.3"
+  }
+}
