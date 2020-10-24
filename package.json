@@ -23,10 +23,15 @@
     "output",
     "cognito",
     "environment",
-    "variable"],
+    "variable"
+  ],
   "author": "Mahasooq AT <mat@mahasooq.com>",
   "license": "MIT",
   "dependencies": {
     "cross-spawn": "^7.0.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mahasooq/serverless-post-deploy-builder/issues"
+  },
+  "homepage": "https://github.com/mahasooq/serverless-post-deploy-builder#readme"
 }
