@@ -1,11 +1,11 @@
 {
-  "name": "serverless-post-deploy-builder",
+  "name": "serverless-post-deployment-builder",
   "version": "1.0.0",
   "description": "A Serverless Framework plugin to immediately build after serverless deployment",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mahasooq/serverless-post-deploy-builder.git"
+    "url": "git+https://github.com/mahasooq/serverless-post-deployment-builder.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,7 +31,7 @@
     "cross-spawn": "^7.0.3"
   },
   "bugs": {
-    "url": "https://github.com/mahasooq/serverless-post-deploy-builder/issues"
+    "url": "https://github.com/mahasooq/serverless-post-deployment-builder/issues"
   },
-  "homepage": "https://github.com/mahasooq/serverless-post-deploy-builder#readme"
+  "homepage": "https://github.com/mahasooq/serverless-post-deployment-builder#readme"
 }

@@ -1,13 +1,13 @@
 # Serverless Post Deployment Builder
-[![npm](https://img.shields.io/npm/v/serverless-post-deploy-builder.svg)](https://www.npmjs.com/package/serverless-post-deploy-builder)
-[![license](https://img.shields.io/github/license/mahasooq/serverless-post-deploy-builder.svg)](https://github.com/mahasooq/serverless-post-deploy-builder/blob/master/LICENSE.md)
+[![npm](https://img.shields.io/npm/v/serverless-post-deployment-builder.svg)](https://www.npmjs.com/package/serverless-post-deployment-builder)
+[![license](https://img.shields.io/github/license/mahasooq/serverless-post-deployment-builder.svg)](https://github.com/mahasooq/serverless-post-deployment-builder/blob/master/LICENSE.md)
 
 A [Serverless Framework](https://serverless.com) plugin to immediately build after serverless deployment. It will fetch the cloudformation stack output and set in enviroment variables. 
 
 ## Installation
 
 ```sh
-$ npm install --save-dev serverless-post-deploy-builder
+$ npm install --save-dev serverless-post-deployment-builder
 ```
 
 ## Configuration
@@ -17,7 +17,7 @@ $ npm install --save-dev serverless-post-deploy-builder
 ...
 
 plugins:
-  - serverless-post-deploy-builder
+  - serverless-post-deployment-builder
 
 postDeployBuilder:
     cwd: app
@@ -46,7 +46,7 @@ service: post-deploy-builder-example
 frameworkVersion: '2'
 
 plugins:
-  - serverless-post-deploy-builder
+  - serverless-post-deployment-builder
 
 
 custom:  
