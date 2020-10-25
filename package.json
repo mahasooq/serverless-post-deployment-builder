@@ -1,6 +1,6 @@
 {
   "name": "serverless-post-deployment-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Serverless Framework plugin to immediately build after serverless deployment",
   "main": "src/index.js",
   "repository": {
