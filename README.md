@@ -2,7 +2,7 @@
 [![npm](https://img.shields.io/npm/v/serverless-post-deployment-builder.svg)](https://www.npmjs.com/package/serverless-post-deployment-builder)
 [![license](https://img.shields.io/github/license/mahasooq/serverless-post-deployment-builder.svg)](https://github.com/mahasooq/serverless-post-deployment-builder/blob/master/LICENSE.md)
 
-A [Serverless Framework](https://serverless.com) plugin to immediately build after serverless deployment. It will fetch the cloudformation stack output and set in enviroment variables. 
+A [Serverless Framework](https://serverless.com) plugin to immediately build your frontend applicatoin after serverless deployment. It can fetch the cloudformation stack output and set in enviroment variables before building. 
 
 ## Installation
 
@@ -29,14 +29,58 @@ postDeployBuilder:
       REACT_APP_USER_POOL_ID: UserPoolId # In the format ENV_NAME: STACK_OUTPUT_NAME
       REACT_APP_USER_POOL_CLIENT_ID: UserPoolClientId
 ...
-```
-You can spefify cloudformation stack outputs you need to set in environemnt variables using the option`stackenvironment`, its a key value in the format `ENV_NAME: STACK_OUTPUT_NAME`
+``` 
 
-## options 
+## Options 
+
+**--noRun**
+
+_optional_
+
 `--noRun` cli option can be passed with `serverless deploy` to disable this plugin
 
-##Example
-In this example, the plugin is setting two cloudformation outputs ( for AWS Cognito ) in the enviroment variable and build the frontend application at `app` directory using `npm`
+### Configuration Options
+
+**cwd**
+
+_required_
+
+The working directory where you need to run the build command
+
+---
+
+**packager**
+
+_optional_, default: `npm`
+
+Either `npm` or `yarn`
+
+---
+
+**command**
+
+_optional_, default: `run build`
+
+---
+
+**environment**
+
+_optional_
+
+The values defined will be set as environemnt variable before building. It will override any environment variable in provider. 
+
+---
+
+**stackenvironment**
+
+_optional_
+
+You can spefify cloudformation stack outputs which you need to set in environemnt variables using this option. It's a key value in the format `ENV_NAME: STACK_OUTPUT_NAME`. It will fetch the output value with key `STACK_OUTPUT_NAME` and set to an environemtn variable named `ENV_NAME`
+
+---
+
+## Example
+In this example, the plugin is setting two cloudformation outputs for AWS Cognito in the enviroment and build frontend application at `app` directory using `npm`
 
 ### serverless.yml
 
